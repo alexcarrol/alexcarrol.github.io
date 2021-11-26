@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="text">Name:</label>
+    <input type="text" name="name1" id="name1" ><br><br>
+    <label for="text">Age:</label>
+    <input type="text" name="age1" id="age1" ><br><br>
+    <button onclick="add()">Add</button><br><br>
+    
+        <table border ="1" cellspacing="0" cellpadding="20" >
+            <thead>
+               <tr>
+                   <th>No</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr>
+                <tr>
+
+                </tr>
+            </thead><tbody id="tbody"></tbody>
+        </table>
+
+            <script>
+                let number= 1;
+                function add(){
+                    let no1=document.getElementsByName("number").value= number;++number
+                    let name1 =document.getElementById('name1').value;
+                    let age1 = document.getElementById('age1').value;
+                    let table= document.getElementsByTagName('table')[0];
+                   
+                   let newRow  = table.insertRow(table.length);
+
+                    let cell0  =newRow.insertCell(0);
+                    let cell1= newRow.insertCell(1);    
+                    let cell2= newRow.insertCell(2);
+
+                    cell0.innerHTML =no1;
+                    cell1.innerHTML = name1;
+                  cell2.innerHTML = age1;
+            }
+        </script>
+</body>
+</html>
